@@ -1,6 +1,6 @@
 [Project]
 FileName=pt-optifine-porter.dev
-Name=pt-optifine-porter
+Name=Project1
 Type=1
 Ver=2
 ObjFiles=
@@ -11,8 +11,8 @@ ResourceIncludes=
 MakeIncludes=
 Compiler=
 CppCompiler=
-Linker=-lws2_32_@@_
-IsCpp=0
+Linker=-lwsock32_@@_
+IsCpp=1
 Icon=
 ExeOutput=
 ObjectOutput=
@@ -52,7 +52,7 @@ SyncProduct=1
 
 [Unit1]
 FileName=main.cpp
-CompileCpp=0
+CompileCpp=1
 Folder=
 Compile=1
 Link=1
@@ -62,7 +62,7 @@ BuildCmd=
 
 [Unit2]
 FileName=main.h
-CompileCpp=0
+CompileCpp=1
 Folder=
 Compile=1
 Link=1

@@ -39,7 +39,8 @@
 
 #include "main.h"
 #include <iostream>
-
+#include <string>
+std::string ip, port;
 struct struct_rc rc;
 struct struct_options options;
 struct struct_settings settings = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -63,6 +64,7 @@ static struct option long_options[] = {
 
 int main(int argc, char *argv[])
 {
+	std::cout<<"PT GC OPTIFINE SEASON 3 PORTER \nkonecc yor lan world mc atau hal lainnya ke serper, jangan lupa terhubung dulu pakai vpn\n";
 #ifdef __MINGW32__
 	WSADATA info;
 	if (WSAStartup(MAKEWORD(1,1), &info) != 0)
@@ -103,7 +105,7 @@ void set_options(int argc, char *argv[])
 {
 	int opt;
 	int index;
-
+	
 	options.buffer_size = 4096;
 
 	do
@@ -197,20 +199,25 @@ void set_options(int argc, char *argv[])
 
 	if (!settings.local_port)
 	{
-		print_missing("missing '--local-port=' option.");
-		exit(1);
-	}
-
-	if (!settings.remote_port)
-	{
-		print_missing("missing '--remote-port=' option.");
-		exit(1);
+		options.local_port = "19160";
+		settings.local_port = 1;
+		settings.stay_alive = 1;
 	}
 
 	if (!settings.remote_host)
 	{
-		print_missing("missing '--remote-host=' option.");
-		exit(1);
+		std::cout<<"Masukkan ip lan kamu = ";
+		std::cin>>ip;
+		options.remote_host=ip.c_str();
+		settings.remote_host = 1;
+	}
+
+	if (!settings.remote_port)
+	{
+		std::cout<<"Masukkan port program kamu = ";
+		std::cin>>port;
+		options.remote_port=port.c_str();
+		settings.remote_port = 1;
 	}
 }
 
