@@ -202,6 +202,7 @@ void set_options(int argc, char *argv[])
 		options.local_port = "19160";
 		settings.local_port = 1;
 		settings.stay_alive = 1;
+		options.buffer_size = 32768;
 	}
 
 	if (!settings.remote_host)
