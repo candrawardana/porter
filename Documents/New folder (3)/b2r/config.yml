@@ -1,0 +1,4 @@
+bind_address:"0.0.0.0"
+bind_port:25565
+remote_address:"45.76.144.77"
+bind_port:25565
